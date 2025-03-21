@@ -1,4 +1,4 @@
-# Tests
+
 import unittest
 from cont_mem_algos import worst_fit
 

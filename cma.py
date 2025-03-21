@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import click
-from cont_mem_algos import first_fit, best_fit, worst_fit
+import sys
+from cont_mem_algos import worst_fit
 
 def print_memory_map(memory_map):
     for memory in memory_map:
@@ -35,29 +36,11 @@ def read_memmap_file(memmap_filename):
 def cmas(algo_str):
     if algo_str == 'all':
         return [
-            {"name" : "First fit",
-             "function" : first_fit },
-            {"name" : "Best fit",
-             "function" : best_fit },
             {"name" : "Worst fit",
              "function" : worst_fit},
         ]
-    elif algo_str == 'first':
-        return [
-            {"name" : "First fit",
-             "function" : first_fit },
-        ]
-    elif algo_str == 'best':
-        return [
-            {"name" : "Best fit",
-             "function" : best_fit },
-        ]
     elif algo_str == 'worst':
         return [
-            {"name" : "First fit",
-             "function" : first_fit },
-            {"name" : "Best fit",
-             "function" : best_fit },
             {"name" : "Worst fit",
              "function" : worst_fit},
         ]
